@@ -1,11 +1,11 @@
 # Lab: Immutable File Attribute — `chattr +i` and `lsattr`
 
-**Series:** linux-ops-mastery — RHCSA Permissions, Special Bits & ACLs
-**Subjects covered:** ext2/3/4 file attributes via `e2fsprogs`, `chattr +i` (immutable), `chattr -i` removal, `lsattr` inspection, why root still cannot unlink until attribute cleared, loopback ext4 filesystem for predictable attribute support on RHEL 9 hosts rooted on XFS
-**Career arcs covered:** RHCSA (protect critical files from accidental deletion), RHCE (documented manual hardening before automation), SRE ("stop the bleeding" during incidents), DevOps (WORM-like guardrails for CI secrets on ext4 data volumes), AI/MLOps (protect signed model manifests on ext4 caches)
-**Prerequisite:** Lab 40 — comfortable as root in a disposable lab path
-**Time Estimate:** 30 to 45 minutes
-**Difficulty arc:** Task 1 loop ext4 sandbox · 2 baseline `lsattr` · 3 set immutable and prove writes fail · 4 prove root unlink fails · 5 contrast normal delete after `-i` · 6 capstone + cleanup
+- **Series:** linux-ops-mastery — RHCSA Permissions, Special Bits & ACLs
+- **Subjects covered:** ext2/3/4 file attributes via `e2fsprogs`, `chattr +i` (immutable), `chattr -i` removal, `lsattr` inspection, why root still cannot unlink until attribute cleared, loopback ext4 filesystem for predictable attribute support on RHEL 9 hosts rooted on XFS
+- **Career arcs covered:** RHCSA (protect critical files from accidental deletion), RHCE (documented manual hardening before automation), SRE ("stop the bleeding" during incidents), DevOps (WORM-like guardrails for CI secrets on ext4 data volumes), AI/MLOps (protect signed model manifests on ext4 caches)
+- **Prerequisite:** Lab 40 — comfortable as root in a disposable lab path
+- **Time Estimate:** 30 to 45 minutes
+- **Difficulty arc:** Task 1 loop ext4 sandbox · 2 baseline `lsattr` · 3 set immutable and prove writes fail · 4 prove root unlink fails · 5 contrast normal delete after `-i` · 6 capstone + cleanup
 
 ---
 
