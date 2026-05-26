@@ -437,6 +437,24 @@ Need to freeze a file on ext4?
 
 ---
 
+## ⏱️ Timing Tips (Exam-Style)
+
+- **Loop first (90 seconds):** If you already memorized the `truncate → losetup → mkfs.ext4 → mount` spine from Lab 44, reuse the exact same muscle memory here — exam tasks reward repetition, not improvisation.
+- **Proof order:** Always capture `lsattr` **before** and **after** `chattr` so a proctor (or future you) sees a clear diff, not a story about what you think happened.
+- **Unlock discipline:** Type `chattr -i` in a scratch buffer before maintenance windows — mistyping `-i` as `+i` during an outage is a self-own.
+- **Unmount last:** Tear down with `umount` before `losetup -d`; reversing the order causes `Device or resource busy` on some kernels.
+
+---
+
+## 🧠 Mental Drills (No Keyboard)
+
+1. Explain aloud why `chmod 777` plus `chattr +i` still blocks `rm` as root.
+2. Which two commands form the smallest unlock/lock pair for immutability?
+3. Why is an ext4 loop safer than practicing on `/` for this lab?
+4. What is the first command you run when a package upgrade complains it cannot replace `/path/file`?
+
+---
+
 ## 🔗 Related Labs
 
 | Lab | Connection |
